@@ -1,3 +1,4 @@
+'use client'
 import React from 'react'
 import { Poppins } from 'next/font/google'
 
@@ -24,7 +25,24 @@ function Hero() {
                 </p>
             </div>
             <div className=' mt-2 gap-2 flex flex-col sm:flex-row '>
-                <a className=' text-center cursor-pointer lg:hover:bg-white lg:hover:text-black bg-transparent py-2 px-6 text-white border-white rounded-full border-2'>Download CV</a>
+                <div onClick={(e)=>{
+                    e.preventDefault()
+
+                    fetch('/CVAntonioMoccia.pdf').then(res=>{
+                        return res.text()
+                    }).then(response=>{
+                       const blob = new Blob([response])
+                        const url = window.URL.createObjectURL(blob);
+                     const link = document.createElement('a')
+                     link.href = url;
+                     link.download = 'AntonioMocciaCV.pdf' ;
+                     link.click();
+                     window.URL.revokeObjectURL(url);
+                      /*   document.removeChild(link) */
+                        //                        const url = URL.createObjectURL(new Blob(response)))                        
+                    })
+
+                }}  className=' text-center cursor-pointer lg:hover:bg-white lg:hover:text-black bg-transparent py-2 px-6 text-white border-white rounded-full border-2'>Download CV</div>
                 {/* <a className=' text-center cursor-pointer lg:hover:bg-white lg:hover:text-black bg-white py-2 px-6 text-black border-black rounded-full border-2'>Contact me</a> */}
             </div>
         </section>
