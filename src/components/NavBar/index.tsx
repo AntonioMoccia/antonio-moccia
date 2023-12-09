@@ -38,8 +38,8 @@ function NavBar() {
       {/* navbar items*/}
       <div ref={navItemsRef} className='bg-[rgb(34,34,34)] lg:w-auto lg:h-full  lg:translate-y-0 translate-y-[-150%] h-[40vh] flex justify-center items-center lg:top-0 bottom-0 z-0 w-full absolute lg:relative top-16 left-0 lg:right-0 '>
         <ul className='flex flex-col gap-2 items-center justify-center h-full lg:flex-row  lg:gap-10'>
-          <Link href={'/#'}><li className='text-white w-full text-center text-2xl py-2 lg:text-sm'>Home</li></Link>
-          <Link href={'/#'}><li className='text-white w-full text-center text-2xl py-2  lg:text-sm'>Knowladges</li></Link>
+          <Link href={'/#Home'}><li className='text-white w-full text-center text-2xl py-2 lg:text-sm'>Home</li></Link>
+          <Link href={'/#knowladges'}><li className='text-white w-full text-center text-2xl py-2  lg:text-sm'>Knowladges</li></Link>
           {/* <Link href={'/#'}><li className='text-white w-full text-center text-2xl py-2'>Contacts</li></Link> */}
         </ul>
       </div>

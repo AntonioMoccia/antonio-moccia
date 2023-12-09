@@ -10,7 +10,7 @@ const poppins = Poppins({
 function Hero() {
     return (
 
-        <section className=' mt-12 min-h-screen w-full gap-2 flex flex-col justify-center px-4 items-center'>
+        <section id='Home' className=' mt-12 min-h-screen w-full gap-2 flex flex-col justify-center px-4 items-center'>
             <div className='  bg-gradient-to-tl from-[rgb(255,134,96)] to-[rgb(128,0,255)] w-56 flex justify-center h-56 rounded-full'>
                 <img src="/Avatar.png" alt="Avatar" />
             </div>

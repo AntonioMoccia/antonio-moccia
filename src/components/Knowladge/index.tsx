@@ -29,7 +29,7 @@ const knowladges = [
 
 function Knowladges() {
     return (
-        <section className=' py-10 flex justify-center gap-12 flex-col  w-full px-5'>
+        <section id='knowladges' className=' py-10 flex justify-center gap-12 flex-col  w-full px-5'>
             <h1 className={`uppercase text-2xl font-bold text-white w-full text-center ${poppins.className}`}>
                 <TextGradient>
                     My knowladges
