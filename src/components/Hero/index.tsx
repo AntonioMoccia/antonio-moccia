@@ -29,9 +29,9 @@ function Hero() {
                     e.preventDefault()
 
                     fetch('/CVAntonioMoccia.pdf').then(res=>{
-                        return res.text()
+                        return res.blob()
                     }).then(response=>{
-                       const blob = new Blob([response])
+                       const blob = new Blob([response],{type: 'application/pdf'})
                         const url = window.URL.createObjectURL(blob);
                      const link = document.createElement('a')
                      link.href = url;
