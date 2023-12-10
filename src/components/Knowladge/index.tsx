@@ -21,47 +21,7 @@ const knowladges = [
     },
     {
         name: 'Tailwind css',
-        image:'/js.png',
-        level: 100
-    },
-    {
-        name: 'Tailwind css',
-        image:'/js.png',
-        level: 100
-    },
-    {
-        name: 'Tailwind css',
-        image:'/js.png',
-        level: 100
-    },
-    {
-        name: 'Tailwind css',
-        image:'/js.png',
-        level: 100
-    },
-    {
-        name: 'Tailwind css',
-        image:'/js.png',
-        level: 100
-    },
-    {
-        name: 'Tailwind css',
-        image:'/js.png',
-        level: 100
-    },
-    {
-        name: 'Tailwind css',
-        image:'/js.png',
-        level: 100
-    },
-    {
-        name: 'Tailwind css',
-        image:'/js.png',
-        level: 100
-    },
-    {
-        name: 'Tailwind css',
-        image:'/js.png',
+        image:'/tailwind.png',
         level: 100
     }
 ]
