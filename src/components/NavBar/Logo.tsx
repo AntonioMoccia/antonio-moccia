@@ -1,8 +1,11 @@
+import Link from 'next/link'
 import React from 'react'
 
 function Logo() {
   return (
-    <div className=' text-white h-full bg-red-400'>/\///</div>
+    <Link href={'/'}>
+      <div className=' text-white h-full flex justify-center items-center text-lg font-semibold '>/\///</div>
+    </Link>
   )
 }
 

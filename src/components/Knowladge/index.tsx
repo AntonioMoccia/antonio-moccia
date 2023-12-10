@@ -10,26 +10,65 @@ const poppins = Poppins({
 
 const knowladges = [
     {
-        name: 'Tailwind css',
-        level: 10
+        name: 'Html',
+        image:'/html.png',
+        level: 80
+    },
+    {
+        name: 'Javascript',
+        image:'/js.png',
+        level: 73
     },
     {
         name: 'Tailwind css',
-        level: 10
+        image:'/js.png',
+        level: 100
     },
     {
         name: 'Tailwind css',
-        level: 10
+        image:'/js.png',
+        level: 100
     },
     {
         name: 'Tailwind css',
-        level: 10
+        image:'/js.png',
+        level: 100
+    },
+    {
+        name: 'Tailwind css',
+        image:'/js.png',
+        level: 100
+    },
+    {
+        name: 'Tailwind css',
+        image:'/js.png',
+        level: 100
+    },
+    {
+        name: 'Tailwind css',
+        image:'/js.png',
+        level: 100
+    },
+    {
+        name: 'Tailwind css',
+        image:'/js.png',
+        level: 100
+    },
+    {
+        name: 'Tailwind css',
+        image:'/js.png',
+        level: 100
+    },
+    {
+        name: 'Tailwind css',
+        image:'/js.png',
+        level: 100
     }
 ]
 
 function Knowladges() {
     return (
-        <section id='knowladges' className=' py-10 flex justify-center gap-12 flex-col  w-full px-5'>
+        <section id='knowladges' className='lg:px-80 min-h-screen pt-24 lg:pt-24 flex justify-start gap-12 flex-col  w-full px-5'>
             <h1 className={`uppercase text-2xl font-bold text-white w-full text-center ${poppins.className}`}>
                 <TextGradient>
                     My knowladges
