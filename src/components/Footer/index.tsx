@@ -19,17 +19,17 @@ function Footer() {
 
             <div className=' flex  h-10 items-center gap-3'>
                 {/**GITHUB */}
-                <Link href={''}>
+                <Link href={'https://github.com/AntonioMoccia'}>
                     <FaGithub className={' text-white text-2xl'} />
                 </Link>
 
                 {/**INSTAGRAM*/}
-                <Link href={''}>
+                <Link href={'https://www.instagram.com/antoniomoccia_'}>
                     <FaInstagram className={' text-white text-2xl'} />
                 </Link>
 
                 {/**LINKEDIN */}
-                <Link href={''}>
+                <Link href={'https://www.linkedin.com/in/antonio-moccia-01ba35130/'}>
                     <FaLinkedin className={' text-white text-2xl'} />
                 </Link>
             </div>
