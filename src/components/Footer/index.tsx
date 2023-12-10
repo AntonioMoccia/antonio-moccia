@@ -5,7 +5,7 @@ import { IoIosMail , IoIosPhonePortrait} from "react-icons/io";
 
 function Footer() {
     return (
-        <section id='footer' className='lg:px-80 py-12 lg:pt-24 flex justify-start gap-12 flex-col bg-[rgb(34,34,34)] w-full px-5'>
+        <section id='footer' className='lg:px-80 mt-20 py-12 lg:pt-24 flex justify-start gap-12 flex-col bg-[rgb(34,34,34)] w-full px-5'>
             <div className=' flex flex-col gap-4'>
                 {/**NUMBER PHONE */}
                 <div className='flex gap-2 items-center text-white '>
