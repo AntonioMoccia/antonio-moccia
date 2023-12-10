@@ -17,11 +17,19 @@ function NavBar() {
   const NAV_LINKS: NavItem[] = [
     {
       label: 'Home',
-      link: ''
+      link: '/#home'
     },
     {
       label: 'Knowladges',
-      link: ''
+      link: '/#knowladges'
+    },
+    {
+      label: 'Experiences',
+      link: '/#experiences'
+    },
+    {
+      label: 'Education',
+      link: '/#education'
     }
   ]
 
@@ -53,7 +61,7 @@ function NavBar() {
       <Logo />
 
       {/* navbar items*/}
-      <div ref={navItemsRef} className='bg-[rgb(34,34,34)] lg:w-auto lg:h-full translate-x-[100%] h-screen flex justify-center items-center lg:top-0  bottom-0 z-0 w-screen absolute lg:relative top-16 left-0 lg:right-0 '>
+      <div ref={navItemsRef} className='bg-[rgb(34,34,34)] lg:w-auto lg:h-full lg:translate-x-0 translate-x-[100%] h-screen flex justify-center items-center lg:top-0  bottom-0 z-0 w-screen absolute lg:relative top-16 left-0 lg:right-0 '>
         <ul className='flex flex-col gap-8 items-center justify-start pt-24 lg:pt-0  w-full  h-full lg:flex-row lg:gap-10'>
           {
             NAV_LINKS.map(({ link, label }: NavItem, index) => {

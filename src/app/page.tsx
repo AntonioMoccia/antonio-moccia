@@ -1,6 +1,7 @@
 import Banner from '@/components/Banner'
 import Education from '@/components/Education'
 import Experiences from '@/components/Experiences'
+import Footer from '@/components/Footer'
 import Hero from '@/components/Hero'
 import Knowladges from '@/components/Knowladge'
 import NavBar from '@/components/NavBar'
@@ -16,6 +17,7 @@ export default function Home() {
       <Knowladges />
       <Experiences />
       <Education />
+      <Footer />
     </main>
   )
 }

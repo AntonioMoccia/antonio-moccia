@@ -24,7 +24,7 @@ const poppins = Poppins({
 
 function Experiences() {
   return (
-    <section className='lg:px-80 min-h-screen w-full pt-20 px-5'>
+    <section id="experiences" className='lg:px-80 w-full pt-20 px-5'>
       <h1 className={`uppercase text-2xl font-bold text-white w-full text-center ${poppins.className}`}>
         <TextGradient>
           My experiences

@@ -10,7 +10,7 @@ const poppins = Poppins({
 function Hero() {
     return (
 
-        <section id='Home' className=' mt-0 min-h-screen w-full gap-2 flex flex-col justify-center px-4 items-center'>
+        <section id='home' className=' mt-0 min-h-screen w-full gap-2 flex flex-col justify-center px-4 items-center'>
             <div className='  bg-gradient-to-tl from-[rgb(255,134,96)] to-[rgb(128,0,255)] w-56 flex justify-center h-56 rounded-full'>
                 <img src="/Avatar.png" alt="Avatar" />
             </div>
@@ -43,7 +43,7 @@ function Hero() {
                     })
 
                 }} className=' text-center cursor-pointer lg:hover:bg-white lg:hover:text-black bg-transparent py-2 px-6 text-white border-white rounded-full border-2'>Download CV</div>
-                {<a className=' text-center cursor-pointer lg:hover:bg-white lg:hover:text-black bg-white py-2 px-6 text-black border-black rounded-full border-2'>Speak me about your idea</a>}
+                {<a href='/#footer' className=' text-center cursor-pointer lg:hover:bg-white lg:hover:text-black bg-white py-2 px-6 text-black border-black rounded-full border-2'>Speak me about your idea</a>}
             </div>
         </section>
     )
