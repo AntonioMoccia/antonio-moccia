@@ -56,7 +56,7 @@ function Education() {
         <Swiper
           spaceBetween={50}
           slidesPerView={innerWidth >= 900 ? 2 : 1}
-          className=' h-96'
+          className=' lg:h-[35rem] h-96'
           scrollbar={true}
           pagination={{
             dynamicBullets: true,
