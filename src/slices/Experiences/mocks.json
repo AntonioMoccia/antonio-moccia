@@ -1,0 +1,68 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {},
+		"items": [
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": [
+					[
+						"company_logo",
+						{
+							"__TYPE__": "ImageContent",
+							"origin": {
+								"id": "main",
+								"url": "https://images.unsplash.com/photo-1589321578146-4c1ba445cc88",
+								"width": 3168,
+								"height": 4752
+							},
+							"url": "https://images.unsplash.com/photo-1589321578146-4c1ba445cc88",
+							"width": 3168,
+							"height": 4752,
+							"edit": {
+								"zoom": 1,
+								"crop": {
+									"x": 0,
+									"y": 0
+								},
+								"background": "transparent"
+							},
+							"thumbnails": {}
+						}
+					],
+					[
+						"company_name",
+						{
+							"__TYPE__": "FieldContent",
+							"value": "strike",
+							"type": "Text"
+						}
+					],
+					[
+						"period",
+						{
+							"__TYPE__": "FieldContent",
+							"value": "essential",
+							"type": "Text"
+						}
+					],
+					[
+						"description",
+						{
+							"__TYPE__": "StructuredTextContent",
+							"value": [
+								{
+									"type": "paragraph",
+									"content": {
+										"text": "Commodo cupidatat aliquip fugiat dolore ex pariatur nostrud id minim enim."
+									}
+								}
+							]
+						}
+					]
+				]
+			}
+		]
+	}
+]

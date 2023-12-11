@@ -1,0 +1,20 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"herotext": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Exercitation excepteur officia occaecat irure Lorem. Lorem reprehenderit dolor irure fugiat mollit incididunt pariatur ut consectetur ullamco proident anim exercitation ut enim."
+						}
+					}
+				]
+			}
+		},
+		"items": []
+	}
+]

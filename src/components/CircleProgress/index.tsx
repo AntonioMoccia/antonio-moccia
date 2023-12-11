@@ -12,8 +12,8 @@ function CircleProgress({percentage,circleWidth}:{percentage:number,circleWidth:
             viewBox={`0 0 ${circleWidth} ${circleWidth}`}
         >
             <linearGradient id='gradient'>
-                <stop offset='10%' stop-color='rgb(255,255,255)' />
-                <stop offset='100%' stop-color='#ddd' />
+                <stop offset='10%' stopColor='rgb(255,255,255)' />
+                <stop offset='100%' stopColor='#ddd' />
             </linearGradient>
             <circle 
                 cx={circleWidth / 2}

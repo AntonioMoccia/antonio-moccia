@@ -14,11 +14,14 @@ const poppins = Poppins({
   subsets: ['devanagari', 'latin', 'latin-ext']
 })
 type Course = {
-  title: string,
-  image: string,
-  platform: string
+  course_title: string,
+  course_image: {
+    url:string,
+    alt:string
+  },
+  course_platform: string
 }
-const Courses: Course[] = [
+/* const Courses: Course[] = [
   {
     title: 'React js',
     image: './attestato-react.jpg',
@@ -37,9 +40,9 @@ const Courses: Course[] = [
     platform: 'udemy'
   },
 ]
+ */
 
-
-function Education() {
+function Education({data}:{data:any}) {
     const [innerWidth,setInnerWidth] = useState(0)
   useEffect(()=>{
     setInnerWidth(window.innerWidth)
@@ -56,7 +59,7 @@ function Education() {
         <Swiper
           spaceBetween={50}
           slidesPerView={innerWidth >= 900 ? 2 : 1}
-          className=' lg:h-[35rem] h-96'
+          className=' lg:h-[28rem] h-96'
           scrollbar={true}
           pagination={{
             dynamicBullets: true,
@@ -64,15 +67,15 @@ function Education() {
           modules={[Pagination]}
         >
           {
-            Courses.map(({ title, image, platform }: Course, index: number) => (
+            data.items.map(({ course_title, course_image, course_platform }: Course, index: number) => (
               <SwiperSlide key={index} className=' rounded-lg text-white h-72 w-28 lg:w-40 bg-[rgb(34,34,34)] '>
                 <div className='w-full h-full flex flex-col justify-between py-10 items-center'>
                   <div className='w-full px-4  h-8  flex items-center'>
                     {/**TITLE */}
-                    <h1 className=' text-xl font-semibold'>{title}</h1>
+                    <h1 className=' text-xl font-semibold'>{course_title}</h1>
                   </div>
                   <div className='w-full px-4'>
-                    <img src={image} />
+                    <img src={course_image.url} />
                   </div>
             
                 </div>

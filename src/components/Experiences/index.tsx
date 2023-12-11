@@ -1,9 +1,9 @@
 import React from 'react'
-import ExperienceCard, { Experience } from './ExperienceCard'
+import ExperienceCard, { Experience } from '../ExperienceCard'
 import TextGradient from '../TextGradient'
 import { Poppins } from 'next/font/google'
 
-const ExperiencesData: Experience[] = [
+/* const ExperiencesData: Experience[] = [
   {
     date: 'dec 2018 - gen 2019',
     title: 'Lutech SPA',
@@ -14,7 +14,7 @@ const ExperiencesData: Experience[] = [
     title: 'Lutech SPA',
     description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, neque officiis amet tenetur dicta dignissimos cupiditate distinctio at, repellat deserunt delectus, nobis aspernatur ipsum rem. Eveniet sequi minima nostrum libero?'
   }
-]
+] */
 
 const poppins = Poppins({
   weight: ['100', '200', '300', '400', '500', '600', '700', '800'],
@@ -22,7 +22,8 @@ const poppins = Poppins({
 })
 
 
-function Experiences() {
+function Experiences({data}:{data:any}) {
+
   return (
     <section id="experiences" className='lg:px-80 w-full pt-20 px-5'>
       <h1 className={`uppercase text-2xl font-bold text-white w-full text-center ${poppins.className}`}>
@@ -32,7 +33,7 @@ function Experiences() {
       </h1>
       <div className='mt-8 flex gap-8 flex-col '>
         {
-          ExperiencesData.map((experience: Experience, index: number) => {
+          data.items.map((experience: Experience, index: number) => {
             return (<ExperienceCard key={index} experience={experience} />)
           })
         }

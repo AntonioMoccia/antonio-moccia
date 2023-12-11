@@ -1,6 +1,6 @@
 'use client'
 import React, { useEffect, useRef, useState } from 'react'
-import Logo from './Logo'
+import Logo from '../Logo'
 import Link from 'next/link'
 import { HiMenu } from "react-icons/hi";
 import { CgClose } from "react-icons/cg";

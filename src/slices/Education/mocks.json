@@ -1,0 +1,66 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"education_text": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Ullamco dolore nulla occaecat commodo occaecat est velit aliqua enim et. Qui irure in culpa proident pariatur. Lorem sit ea magna aute incididunt reprehenderit mollit laborum quis consequat consectetur."
+						}
+					}
+				]
+			}
+		},
+		"items": [
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": [
+					[
+						"course_title",
+						{
+							"__TYPE__": "FieldContent",
+							"value": "finger",
+							"type": "Text"
+						}
+					],
+					[
+						"course_image",
+						{
+							"__TYPE__": "ImageContent",
+							"origin": {
+								"id": "main",
+								"url": "https://images.unsplash.com/photo-1448932223592-d1fc686e76ea",
+								"width": 3500,
+								"height": 2338
+							},
+							"url": "https://images.unsplash.com/photo-1448932223592-d1fc686e76ea",
+							"width": 3500,
+							"height": 2338,
+							"edit": {
+								"zoom": 1,
+								"crop": {
+									"x": 0,
+									"y": 0
+								},
+								"background": "transparent"
+							},
+							"thumbnails": {}
+						}
+					],
+					[
+						"course_platform",
+						{
+							"__TYPE__": "FieldContent",
+							"value": "ran",
+							"type": "Text"
+						}
+					]
+				]
+			}
+		]
+	}
+]

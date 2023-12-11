@@ -1,13 +1,14 @@
 'use client'
 import React from 'react'
 import { Poppins } from 'next/font/google'
-
+import {PrismicRichText} from '@prismicio/react'
 const poppins = Poppins({
     weight: ['100', '200', '300', '400', '500', '600', '700', '800'],
     subsets: ['devanagari', 'latin', 'latin-ext']
 })
 
-function Hero() {
+function Hero({data}:{data:any}) {
+
     return (
 
         <section id='home' className=' mt-0 min-h-screen w-full gap-2 flex flex-col justify-center px-4 items-center'>
@@ -20,9 +21,9 @@ function Hero() {
                 </h1>
             </div>
             <div className='  max-w-4xl'>
-                <p className='text-[#C5C5C5] text-center px-18 md:px-48'>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam blanditiis neque ex, eaque magni libero quae soluta labore esse animi! Ullam ipsa dolores veritatis maiores tempora magni vitae error quas.
-                </p>
+                <div className='text-[#C5C5C5] text-center px-18 md:px-48'>
+                   <PrismicRichText field={data.primary.herotext} />
+                </div>
             </div>
             <div className=' mt-2 gap-2 flex flex-col sm:flex-row '>
                 <div onClick={(e) => {

@@ -1,0 +1,41 @@
+{
+  "id": "knowladges",
+  "type": "SharedSlice",
+  "name": "Knowladges",
+  "description": "Knowladges",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {},
+      "items": {
+        "title": {
+          "type": "Text",
+          "config": {
+            "label": "title",
+            "placeholder": ""
+          }
+        },
+        "technologylogo": {
+          "type": "Image",
+          "config": {
+            "label": "TechnologyLogo",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "level": {
+          "type": "Number",
+          "config": {
+            "label": "level",
+            "placeholder": ""
+          }
+        }
+      }
+    }
+  ]
+}
