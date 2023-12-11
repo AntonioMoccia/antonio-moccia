@@ -21,7 +21,7 @@ export type Experience = {
 function ExperienceCard({ experience }: { experience: Experience }) {
 
   return (
-    <div className='  min-w-full lg:min-w-[50vw] justify-between items-center flex-col  text-white bg-transparent flex '>
+    <div className='  min-w-full justify-between items-center flex-col  text-white bg-transparent flex '>
       <div className=' w-full flex justify-between px-3 py-2 items-center'>
         <h1 className=' text-xl h-full flex items-center gap-2'>
           {experience.company_logo?.url ? <div className=' w-11 h-auto'><NextImage image={experience.company_logo} /></div> : ''}{experience.company_name}
