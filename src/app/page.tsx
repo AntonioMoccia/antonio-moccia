@@ -7,6 +7,7 @@ import Knowladges from '@/components/Knowladge'
 import NavBar from '@/components/NavBar'
 import { createClient } from '../prismicio'
 import {  HomeDocumentDataSlicesSlice } from '../../prismicio-types'
+import { poppins } from '@/constants/Poppins'
 
 
 function getSliceByName(slices: HomeDocumentDataSlicesSlice[], name: string) : any {
@@ -23,7 +24,7 @@ export default async function Home() {
 
 
   return (
-    <main className={`flex min-h-screen flex-col items-center `}>
+    <main className={`flex min-h-screen flex-col items-center ${poppins.className} `}>
       {/* <Banner /> */}
       <NavBar />
       <Hero data={getSliceByName(home.data.slices, 'hero')} />

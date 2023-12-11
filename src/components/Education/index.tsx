@@ -1,7 +1,9 @@
 'use client'
 import React, { useEffect, useState } from 'react'
+import NextImage from '../NextImage';
+
 import TextGradient from '../TextGradient'
-import { Poppins } from 'next/font/google'
+
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination } from 'swiper/modules';
 
@@ -9,38 +11,21 @@ import 'swiper/css/pagination';
 import 'swiper/css';
 
 
-const poppins = Poppins({
-  weight: ['100', '200', '300', '400', '500', '600', '700', '800'],
-  subsets: ['devanagari', 'latin', 'latin-ext']
-})
+
+
 type Course = {
   course_title: string,
   course_image: {
     url:string,
-    alt:string
+    alt:string,
+    dimensions:{
+      height:number,
+      width:number
+    }
   },
   course_platform: string
 }
-/* const Courses: Course[] = [
-  {
-    title: 'React js',
-    image: './attestato-react.jpg',
-    platform: 'udemy'
-  },  {
-    title: 'React js',
-    image: './attestato-react.jpg',
-    platform: 'udemy'
-  },  {
-    title: 'React js',
-    image: './attestato-react.jpg',
-    platform: 'udemy'
-  },{
-    title: 'React js',
-    image: './attestato-react.jpg',
-    platform: 'udemy'
-  },
-]
- */
+
 
 function Education({data}:{data:any}) {
     const [innerWidth,setInnerWidth] = useState(0)
@@ -49,7 +34,7 @@ function Education({data}:{data:any}) {
   },[])
   return (
     <section id='education' className='lg:px-80  w-full pt-20 px-5'>
-      <h1 className={`uppercase text-2xl font-bold text-white w-full text-center ${poppins.className}`}>
+      <h1 className={`uppercase text-2xl font-bold text-white w-full text-center`}>
         <TextGradient>
           My educations
         </TextGradient>
@@ -75,7 +60,7 @@ function Education({data}:{data:any}) {
                     <h1 className=' text-xl font-semibold'>{course_title}</h1>
                   </div>
                   <div className='w-full px-4'>
-                    <img src={course_image.url} />
+                    <NextImage image={course_image} />
                   </div>
             
                 </div>

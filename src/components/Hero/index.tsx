@@ -1,22 +1,18 @@
 'use client'
 import React from 'react'
-import { Poppins } from 'next/font/google'
 import {PrismicRichText} from '@prismicio/react'
-const poppins = Poppins({
-    weight: ['100', '200', '300', '400', '500', '600', '700', '800'],
-    subsets: ['devanagari', 'latin', 'latin-ext']
-})
+import Image from 'next/image'
 
 function Hero({data}:{data:any}) {
 
     return (
 
         <section id='home' className=' mt-0 min-h-screen w-full gap-2 flex flex-col justify-center px-4 items-center'>
-            <div className='  bg-gradient-to-tl from-[rgb(255,134,96)] to-[rgb(128,0,255)] w-56 flex justify-center h-56 rounded-full'>
-                <img src="/Avatar.png" alt="Avatar" />
+            <div className=' bg-gradient-to-tl from-[rgb(255,134,96)] to-[rgb(128,0,255)] w-56 flex justify-center h-56 rounded-full'>
+                <Image src="/Avatar.png" alt="Avatar" width={224} height={224} />
             </div>
             <div className=' w-full '>
-                <h1 className={`text-white text-center text-5xl font-bold ${poppins.className}`} >
+                <h1 className={`text-white text-center text-5xl font-bold`} >
                     code your <span className='text-transparent bg-clip-text bg-gradient-to-tl from-[rgb(255,134,96)] to-[rgb(128,0,255)] '>ideas</span>
                 </h1>
             </div>
@@ -28,7 +24,6 @@ function Hero({data}:{data:any}) {
             <div className=' mt-2 gap-2 flex flex-col sm:flex-row '>
                 <div onClick={(e) => {
                     e.preventDefault()
-
                     fetch('/CVAntonioMoccia.pdf').then(res => {
                         return res.blob()
                     }).then(response => {
