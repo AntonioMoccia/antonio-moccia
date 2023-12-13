@@ -24,7 +24,7 @@ function Hero({data}:{data:any}) {
             <div className=' mt-2 gap-2 flex flex-col sm:flex-row '>
                 <div onClick={(e) => {
                     e.preventDefault()
-                    fetch('/CVAntonioMoccia.pdf').then(res => {
+                    fetch(data.primary.curricula.url).then(res => {
                         return res.blob()
                     }).then(response => {
                         const blob = new Blob([response], { type: 'application/pdf' })
@@ -33,13 +33,11 @@ function Hero({data}:{data:any}) {
                         link.href = url;
                         link.download = 'AntonioMocciaCV.pdf';
                         link.click();
-                        window.URL.revokeObjectURL(url);
-                        /*   document.removeChild(link) */
-                        //                        const url = URL.createObjectURL(new Blob(response)))                        
+                        window.URL.revokeObjectURL(url);                 
                     })
 
                 }} className=' text-center cursor-pointer lg:hover:bg-white lg:hover:text-black bg-transparent py-2 px-6 text-white border-white rounded-full border-2'>Download CV</div>
-                {<a href='/#footer' className=' text-center cursor-pointer lg:hover:bg-white lg:hover:text-black bg-white py-2 px-6 text-black border-black rounded-full border-2'>Speak me about your idea</a>}
+                {<a href='#contacts' className=' text-center cursor-pointer lg:hover:bg-white lg:hover:text-black bg-white py-2 px-6 text-black border-black rounded-full border-2'>Speak me about your idea</a>}
             </div>
         </section>
     )

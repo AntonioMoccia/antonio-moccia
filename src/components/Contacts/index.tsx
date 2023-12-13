@@ -94,9 +94,9 @@ function Contacts() {
     }
 
     return (
-        <section id="experiences" className='lg:px-48 flex flex-col lg:flex-row md:px-36 w-full pt-24 px-5'>
+        <section id="contacts" className='lg:px-48 flex flex-col lg:flex-row md:px-36 w-full pt-24 px-5'>
             <div className='lg:w-1/2'>
-            <h1 className={`uppercase text-2xl font-bold text-white w-full text-left`}>
+                <h1 className={`uppercase text-2xl font-bold text-white w-full text-left`}>
                     <TextGradient>
                         Contact me
                     </TextGradient>
@@ -106,7 +106,6 @@ function Contacts() {
             <div className=' w-full flex flex-col lg:w-1/2 '>
                 <form className='flex flex-col gap-6' onSubmit={async (e) => {
                     e.preventDefault()
-
                     try {
                         const response = await sendContactForm(formData)
                     } catch (error) {

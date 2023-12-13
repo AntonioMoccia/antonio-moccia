@@ -239,6 +239,16 @@ export interface HeroSliceDefaultPrimary {
    * - **Documentation**: https://prismic.io/docs/field#rich-text-title
    */
   herotext: prismic.RichTextField;
+
+  /**
+   * curricula field in *Hero → Primary*
+   *
+   * - **Field Type**: Link to Media
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero.primary.curricula
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  curricula: prismic.LinkToMediaField;
 }
 
 /**

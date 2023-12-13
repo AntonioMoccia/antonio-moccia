@@ -61,7 +61,11 @@ function NavBar() {
       <Logo />
 
       {/* navbar items*/}
-      <div ref={navItemsRef} className='bg-[rgb(34,34,34)] lg:w-auto lg:h-full lg:translate-x-0 translate-x-[100%] h-screen flex justify-center items-center lg:top-0  bottom-0 z-0 w-screen absolute lg:relative top-16 left-0 lg:right-0 '>
+      <div ref={navItemsRef} className={`
+        bg-[rgb(34,34,34)] 
+        lg:w-auto lg:h-full lg:right-0 lg:translate-x-0 lg:relative lg:top-0
+        translate-x-[100%] h-screen flex justify-center items-center bottom-0 z-0 w-screen absolute top-16 left-0 
+      `}>
         <ul className='flex flex-col gap-8 items-center justify-start pt-24 lg:pt-0  w-full  h-full lg:flex-row lg:gap-10'>
           {
             NAV_LINKS.map(({ link, label }: NavItem, index) => {
