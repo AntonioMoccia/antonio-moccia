@@ -24,7 +24,7 @@ function Hero({data}:{data:any}) {
             <div className=' mt-2 gap-2 flex flex-col sm:flex-row '>
                 <div onClick={(e) => {
                     e.preventDefault()
-                    fetch(data.primary.curricula.url).then(res => {
+                    fetch('/CVAntonioMoccia.pdf').then(res => {
                         return res.blob()
                     }).then(response => {
                         const blob = new Blob([response], { type: 'application/pdf' })

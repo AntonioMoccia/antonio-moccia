@@ -7,16 +7,7 @@ function Footer() {
     return (
         <section id='footer' className='lg:px-52 mt-20 py-12 lg:pt-24 flex justify-end gap-12 flex-col bg-[rgb(34,34,34)] w-full px-5'>
 
-            {/* <div className=' flex flex-col gap-4'> */}
-                {/**NUMBER PHONE */}
-              {/*   <div className='flex gap-2 items-center text-white '>
-                    <IoIosPhonePortrait className={' text-white text-xl'} /><a href='tel:+393314487994'>+39 3314487994</a>
-                </div> */}
-                {/** EMAIL */}
-                {/* <div className='flex gap-2 items-center text-white '>
-                    <IoIosMail className={' text-white text-xl'} /><a href='mailto:+393314487994'>moccia.ant@gmail.com</a>
-                </div>
-            </div> */}
+
 
             
             <div className=' flex  h-auto items-center gap-3'>
