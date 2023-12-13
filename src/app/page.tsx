@@ -8,6 +8,7 @@ import NavBar from '@/components/NavBar'
 import { createClient } from '../prismicio'
 import {  HomeDocumentDataSlicesSlice } from '../../prismicio-types'
 import { poppins } from '@/constants/Poppins'
+import Contacts from '@/components/Contacts'
 
 
 function getSliceByName(slices: HomeDocumentDataSlicesSlice[], name: string) : any {
@@ -31,6 +32,7 @@ export default async function Home() {
       <Knowladges data={getSliceByName(home.data.slices,'knowladges')} />
       <Experiences data={getSliceByName(home.data.slices, 'experiences')} />
       <Education data={getSliceByName(home.data.slices, 'education')} />
+      <Contacts />
       <Footer />
     </main>
   )

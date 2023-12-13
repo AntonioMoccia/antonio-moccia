@@ -16,31 +16,31 @@ import 'swiper/css';
 type Course = {
   course_title: string,
   course_image: {
-    url:string,
-    alt:string,
-    dimensions:{
-      height:number,
-      width:number
+    url: string,
+    alt: string,
+    dimensions: {
+      height: number,
+      width: number
     }
   },
   course_platform: string
 }
 
 
-function Education({data}:{data:any}) {
-    const [innerWidth,setInnerWidth] = useState(0)
-  useEffect(()=>{
+function Education({ data }: { data: any }) {
+  const [innerWidth, setInnerWidth] = useState(0)
+  useEffect(() => {
     setInnerWidth(window.innerWidth)
-  },[])
+  }, [])
   return (
     <section id='education' className='lg:px-48 md:px-36 w-full pt-20 px-5'>
       <h1 className={`uppercase text-2xl font-bold text-white w-full text-center`}>
         <TextGradient>
-          My educations
+          My education
         </TextGradient>
       </h1>
       <div className='mt-20'>
-      {/*   <h4 className=' text-white w-full text-center mb-4 text-lg'>Courses</h4> */}
+        {/*   <h4 className=' text-white w-full text-center mb-4 text-lg'>Courses</h4> */}
         <Swiper
           spaceBetween={50}
           slidesPerView={innerWidth >= 1200 ? 2 : 1}
@@ -62,7 +62,7 @@ function Education({data}:{data:any}) {
                   <div className='w-full px-4'>
                     <NextImage image={course_image} />
                   </div>
-            
+
                 </div>
               </SwiperSlide>
             ))
