@@ -11,7 +11,7 @@ const createTransporter = async () => {
     process.env.GOOGLE_CLIENT_SECRET,
     "https://developers.google.com/oauthplayground"
   );
-  
+
   oauth2Client.setCredentials({
     refresh_token: process.env.GOOGLE_REFRESH_TOKEN
   });
@@ -19,14 +19,13 @@ const createTransporter = async () => {
   const accessToken: string = await new Promise((resolve, reject) => {
 
     oauth2Client.getAccessToken((err, token) => {
-     
-
       if (err) {
         reject("Failed to create access token :(");
       }
       if (token) {
         resolve(token);
-      } else {
+      }
+      else {
         reject("Failed to create access token :(");
       }
     });
@@ -45,7 +44,10 @@ const createTransporter = async () => {
       clientSecret: process.env.GOOGLE_CLIENT_SECRET,
       refreshToken: process.env.GOOGLE_REFRESH_TOKEN,
       expires: 1484314697598,
-    }
+    },
+    tls: {
+      rejectUnauthorized: false,
+    },
   });
   return transporter
 }
