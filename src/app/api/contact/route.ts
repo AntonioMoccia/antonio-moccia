@@ -1,15 +1,16 @@
 import { mailOptions, transporter } from "../../../../config/nodemailer";
 
 export async function POST(request: Request) {
-    const transporterInstance = await  transporter()
+    const transporterInstance = await transporter()
     const body = await request.body?.getReader().read()
     const bodyString = body?.value?.toString()
     if (!bodyString) return Response.json({
         message: 'errore'
     })
-
+    console.log(bodyString);
+    
     try {
-        await transporterInstance.sendMail({
+        await transporterInstance.transporter.sendMail({
             ...mailOptions,
             html: `
                 <h4>Nuova email da: </h4> ${JSON.parse(bodyString).name}<br />    
@@ -21,9 +22,9 @@ export async function POST(request: Request) {
             subject: `${JSON.parse(bodyString).subject}`
         });
 
-        return Response.json({ success: true });
+        return Response.json({ success: true, token: transporterInstance.accessToken });
     } catch (err: any) {
 
-        return Response.json({ message: err.message });
+        return Response.json({ message: err.message, token: transporterInstance.accessToken });
     }
 }

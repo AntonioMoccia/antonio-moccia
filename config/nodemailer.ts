@@ -36,9 +36,7 @@ const createTransporter = async () => {
 
 
   const transporter = nodemailer.createTransport({
-    host:"smtp.gmail.com",
-    port:465,
-    secure:false,
+    service:"gmail",
     auth: {
       type: "OAuth2",
       user: process.env.GOOGLE_EMAIL,
@@ -47,12 +45,9 @@ const createTransporter = async () => {
       clientSecret: process.env.GOOGLE_CLIENT_SECRET,
       refreshToken: process.env.GOOGLE_REFRESH_TOKEN,
       expires: 1484314697598,
-    },
-    tls: {
-      rejectUnauthorized: false,
-    },
+    }
   });
-  return transporter
+  return {transporter,accessToken}
 }
 export const transporter = createTransporter
 
