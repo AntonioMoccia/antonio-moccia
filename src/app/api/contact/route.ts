@@ -1,7 +1,7 @@
 import { mailOptions, transporter } from "../../../../config/nodemailer";
 
 export async function POST(request: Request) {
-
+    const transporterInstance = await  transporter()
     const body = await request.body?.getReader().read()
     const bodyString = body?.value?.toString()
     if (!bodyString) return Response.json({
@@ -9,7 +9,7 @@ export async function POST(request: Request) {
     })
 
     try {
-        await transporter.sendMail({
+        await transporterInstance.sendMail({
             ...mailOptions,
             html: `
                 <h4>Nuova email da: </h4> ${JSON.parse(bodyString).name}<br />    

@@ -6,7 +6,6 @@ import { CiCircleCheck } from "react-icons/ci";
 
 import Toast from '../Toast'
 import { IoIosMail, IoIosPhonePortrait } from 'react-icons/io';
-import ContactCanvas from '../ContactCanvas';
 
 export type FormProps = {
     values: {
