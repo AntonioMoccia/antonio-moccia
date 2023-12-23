@@ -3,7 +3,6 @@ import { google } from "googleapis"
 const email = process.env.GOOGLE_EMAIL;
 const pass = process.env.GOOGLE_PASS;
 
-
 const OAuth2 = google.auth.OAuth2;
 const createTransporter = async () => {
   const oauth2Client = new OAuth2(
@@ -19,7 +18,7 @@ const createTransporter = async () => {
   const accessToken: string = await new Promise((resolve, reject) => {
     
     oauth2Client.getAccessToken((err, token) => {
-      console.log(err,token);
+    
       if (err) {
         reject("Failed to create access token :(");
       }
@@ -36,7 +35,8 @@ const createTransporter = async () => {
 
 
   const transporter = nodemailer.createTransport({
-    service:"gmail",
+    host: "smtp.gmail.com",
+    port: 465,
     auth: {
       type: "OAuth2",
       user: process.env.GOOGLE_EMAIL,
@@ -47,6 +47,7 @@ const createTransporter = async () => {
       expires: 1484314697598,
     }
   });
+  
   return {transporter,accessToken}
 }
 export const transporter = createTransporter
