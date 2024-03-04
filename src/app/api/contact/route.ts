@@ -1,30 +1,29 @@
-import { mailOptions, transporter } from "../../../../config/nodemailer";
+import { Resend } from 'resend'
+import ContactMe from '@/components/Emails/ContactMe';
 
 export async function POST(request: Request) {
-    const transporterInstance = await transporter()
-    const body = await request.body?.getReader().read()
-    const bodyString = body?.value?.toString()
-    if (!bodyString) return Response.json({
-        message: 'errore'
-    })
-    console.log(bodyString);
-    
+
+    const bodyRequest = await request.body?.getReader().read()
+    const bodyString = bodyRequest?.value?.toString()
+    const body = JSON.parse(bodyString!)
+console.log(body);
+
+    const { name, number, email, subject, object } = body
+
+    const resend = new Resend(process.env.RESEND_API_KEY);
     try {
-        await transporterInstance.transporter.sendMail({
-            ...mailOptions,
-            html: `
-                <h4>Nuova email da: </h4> ${JSON.parse(bodyString).name}<br />    
-                <h4>email: </h4> ${JSON.parse(bodyString).email}<br />
-                <h4>phon number: </h4> ${JSON.parse(bodyString).number}<br />
-                <br />
-                <h1> Testo email </h1><br />              
-                <p>${JSON.parse(bodyString).text}</p>`,
-            subject: `${JSON.parse(bodyString).subject}`
-        });
-
-        return Response.json({ success: true, token: transporterInstance.accessToken });
+        resend.emails.send({
+            from: 'website@resend.dev',
+            subject,
+            to: "moccia.ant@gmail.com",
+            react: ContactMe({
+                name, tel:number, from: email, idea: object
+            })
+        })
+        return Response.json({ success: true });
     } catch (err: any) {
-
-        return Response.json({ message: err.message, token: transporterInstance.accessToken });
+        console.log(err);
+        
+        return Response.json({ success: false });
     }
 }

@@ -30,13 +30,10 @@ const createTransporter = async () => {
       }
     });
   });
-
-
-
+  console.log(process.env.GOOGLE_REFRESH_TOKEN)
 
   const transporter = nodemailer.createTransport({
-    host: "smtp.gmail.com",
-    port: 465,
+    host: 'gmail',
     auth: {
       type: "OAuth2",
       user: process.env.GOOGLE_EMAIL,
