@@ -7,6 +7,6 @@ export const sendContactForm = async (data: FormProps) =>
     headers: { "Content-Type": "application/html", Accept: "application/html" },
   }).then((res) => {
     return res
-  }).catch(error=>{
+  }).catch(error => {
     return error
   });
