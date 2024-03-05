@@ -6,7 +6,7 @@ export async function POST(request: Request) {
     const bodyRequest = await request.body?.getReader().read()
     const bodyString = bodyRequest?.value?.toString()
     const body = JSON.parse(bodyString!)
-console.log(body);
+    console.log(body);
 
     const { name, number, email, subject, object } = body
 

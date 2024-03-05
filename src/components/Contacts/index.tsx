@@ -1,13 +1,9 @@
 'use client'
-import React, { FormEvent, FormEventHandler, useEffect, useRef, useState } from 'react'
+import React, { FormEvent, useRef, useState } from 'react'
 import TextGradient from '../TextGradient'
 import { sendContactForm } from '../../../lib/api'
-import { CiCircleCheck } from "react-icons/ci";
 
-import Toast from '../Toast'
 import { IoIosMail, IoIosPhonePortrait } from 'react-icons/io';
-import { Resend } from 'resend';
-import ContactMe from '../Emails/ContactMe';
 
 export type FormProps = {
     values: {
@@ -34,8 +30,8 @@ export type CheckInputChangeProps = {
 }
 
 function Contacts() {
-    const [error,setError] = useState<boolean>(false)
-    const [sended,setSended] = useState<boolean>(false)
+    const [error, setError] = useState<boolean>(false)
+    const [sended, setSended] = useState<boolean>(false)
 
     const [formData, setFormData] = useState<FormProps>({
         values: {
@@ -98,36 +94,22 @@ function Contacts() {
         }))
 
     }
-    const onSubmit = async (e:FormEvent)=>{
+    const onSubmit = async (e: FormEvent) => {
         e.preventDefault()
         try {
-            const send= await sendContactForm(formData)
+            const send = await sendContactForm(formData)
             console.log(send);
-            
-        } catch (error) {
-            
-        }
-        /*   
-        try {            
-            const resend = new Resend(process.env.NEXT_PUBLIC_RESEND_API_KEY);
-            const response = await resend.emails.send({
-                from: 'website@resend.dev',
-                subject: "Prova",
-                to: "moccia.ant@gmail.com",
-                react:<ContactMe name={name} tel={number} from={email} idea={text} />
-            })
-            console.log(response);
-            
+
         } catch (err) {
             console.log(err);
-        } 
-        */
+
+        }
     }
 
     return (
         <section id="contacts" className='lg:px-48 flex flex-col lg:flex-row md:px-36 w-full pt-24 px-5'>
-           
-           <h1>{error}</h1>
+
+            <h1>{error}</h1>
             <div className='lg:w-1/2'>
                 <h1 className={`uppercase text-2xl font-bold text-white w-full text-left`}>
                     <TextGradient>
@@ -146,7 +128,7 @@ function Contacts() {
                 </div>
             </div>
 
-           {/*  <ContactCanvas /> */}
+            {/*  <ContactCanvas /> */}
             {/* <Toast variant='success' text='Email inviata!' icon={<CiCircleCheck className=' text-lg' />} /> */}
             <div className=' w-full flex flex-col lg:w-1/2 mt-16 lg:mt-0 '>
                 <form className='flex flex-col gap-6' onSubmit={onSubmit}>
